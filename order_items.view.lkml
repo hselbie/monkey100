@@ -1,6 +1,6 @@
 view: order_items {
   sql_table_name: public.order_items ;;
-​
+
   dimension: order_item_id {
     primary_key: yes
     type: number
@@ -60,12 +60,12 @@ view: order_items {
     ]
     sql: ${TABLE}.returned_at ;;
   }
-​
+
   dimension: sale_price {
     type: number
     sql: ${TABLE}.sale_price ;;
   }
-​
+
   dimension_group: shipped {
     type: time
     timeframes: [
@@ -79,23 +79,23 @@ view: order_items {
     ]
     sql: ${TABLE}.shipped_at ;;
   }
-​
+
   dimension: status {
     type: string
     sql: ${TABLE}.status ;;
   }
-​
+
   dimension: user_id {
     type: number
     # hidden: yes
     sql: ${TABLE}.user_id ;;
   }
-​
+
   measure: count {
     type: count
     drill_fields: [detail*]
   }
-​
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
