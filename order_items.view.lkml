@@ -40,6 +40,7 @@ view: order_items {
     type: number
     # hidden: yes
     sql: ${TABLE}.inventory_item_id ;;
+    html: {{value}} ;;
   }
 
   dimension: order_id {
