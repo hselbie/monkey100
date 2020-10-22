@@ -84,6 +84,7 @@ view: order_items {
   }
 
   dimension: status {
+    label: "status label"
     type: string
     sql: ${TABLE}.status ;;
   }
