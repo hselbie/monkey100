@@ -8,6 +8,7 @@ view: order_items {
   }
 
   dimension_group: created {
+    label: "test" 
     type: time
     timeframes: [
       raw,
@@ -44,6 +45,7 @@ view: order_items {
   }
 
   dimension: order_id {
+    label: "test"
     type: number
     sql: ${TABLE}.order_id ;;
   }
